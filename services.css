@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100vw;
+    min-width: 500px;
 
 }
 
@@ -28,6 +29,46 @@ nav {
     justify-content: start;
 
 
+}
+
+.call{
+    display: flex;
+    color:white;
+    align-items: center;
+    justify-content: end;
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    height: 8vh;
+    padding-right: 5vw;
+    /* border: 1px solid red; */
+    z-index: 10;
+    bottom: 0;
+}
+
+/* burger menu */
+
+.burger {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    display: none;
+  }
+#nav-burger-menu{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right:0;
+    top:9vh;
+    padding: 1vh;
+    z-index: 100;
+    background-color: gray;
+
+}
+
+#nav-burger-menu .menu-items{
+    border-top: 1px solid white;
 }
 
 #company-logo-container {
@@ -84,7 +125,7 @@ a {
 
 main {
     width: 100%;
-    background-color: pink;
+    /* background-color: pink; */
     height: auto;
 
 }
@@ -192,22 +233,15 @@ section {
 }
 
 #plan-image-container {
-    grid-column: 3/8;
+    grid-column: 1/10;
     grid-row: 1/6;
 
-    /* background-color: green; */
-    /* background-image: url("https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/hqguvxyyi5jciyrzy35v/page-3");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    border-radius: 100vw; */
-    /* border: 1px solid gray; */
-    /* border: 1px solid blue; */
+  
 }
 
 #plan-image {
-    height: 84vh;
-    width: 84vh;
+    height: 80vh;
+    width: 30vw;
     background-image: url("https://res.cloudinary.com/luxuryp/images/f_auto,q_auto/hqguvxyyi5jciyrzy35v/page-3");
     background-repeat: no-repeat;
     background-size: cover;
@@ -262,10 +296,14 @@ section {
 
     font-size: 2vh;
     font-family: arial;
+    background-color: white;
+    padding-left: 2vh;
+    border-radius: 3vh;
+    
 
 }
 
-/* staginh section  */
+/************************* staginh section  **********************/
 
 #staging-section {
     height: 100vh;
@@ -352,7 +390,7 @@ ul>li {
     border-radius: 4vh;
 }
 
-/* sell-buy sections */
+/********************* sell-buy sections ************************/
 
 #sell-buy-section {
     height: 100vh;
@@ -377,6 +415,8 @@ ul>li {
     /* border: 1px solid red; */
 
 }
+
+
 
 
 /* sell container */
@@ -407,14 +447,29 @@ ul>li {
 .step-container {
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    bottom: 75%;
-    height: 50%;
+    bottom: 90%;
+    height: 80%;
+
 
 }
+
+.process-container{
+    color: white;
+    padding-bottom: 4vh;
+    font-size: 6vh;
+}
+#buy-step, #sell-step{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
 
 .step-card {
     border-right: 1px solid white;
@@ -422,13 +477,14 @@ ul>li {
     padding-right: 3vh;
     padding-left: 3vh;
     font-size: 2vh;
+    height: 12vh;
 }
 
 .step-number {
     font-size: 5vh;
 }
 
-/* abput section styling */
+/* ****************about section styling *******************/
 
 #about-section {
 
@@ -466,21 +522,21 @@ ul>li {
 
 .about-cards {
     background-color: white;
-    height: 80%;
-    width: 90%;
+    height: 90%;
+    width: 80%;
     padding: 2%;
     border-radius: 5vh;
 
 }
 
 #about-card-1 {
-    display: none;
+    display: flex;
 
 
 }
 
 #about-card-2 {
-    display: flex;
+    display: none;
 }
 
 #about-card-3 {
@@ -503,6 +559,10 @@ ul>li {
 .about-description-holder {
     width: 60%;
 
+}
+
+#card-3-heading{
+    display: none;
 }
 
 .about-img-holder>img {
@@ -541,7 +601,7 @@ ul>li {
 }
 
 .about-text-description {
-    font-size: 3vh;
+    font-size: 2.5vh;
     text-align: justify;
 }
 
@@ -560,7 +620,7 @@ ul>li {
 }
 
 
-/*  marketing */
+/* ************** marketing ************************/
 
 #marketing {
     width: 100vw;
@@ -608,7 +668,8 @@ ul>li {
 
 #marketing-logos {
     height: 15%;
-    width: 100%;
+    width: 60%;
+    margin: auto;
 }
 
 #market-top-card {
@@ -629,6 +690,12 @@ ul>li {
     width: 30%;
     /* border: 1px solid red; */
 
+}
+.market-logo-cards{
+    width: 100%;
+}
+.market-logo-cards>img{
+    width: 100%;
 }
 
 #market-top-card-title,
@@ -710,6 +777,7 @@ ul>li {
 
 .partners-logo-containers>img {
     height: 100%;
+    width: 100%;
 }
 
 .global-contents,
@@ -739,7 +807,7 @@ ul>li {
     padding-top: 20vh;
 }
 
-/* work section */
+/****************** work section *********************/
 
 
 #work-section {
@@ -798,7 +866,7 @@ ul>li {
 
 }
 
-/* contact styling */
+/************ contact styling *************/
 
 #contact-section {
     height: 80vh;
@@ -938,7 +1006,7 @@ input[name="email-box"]:active {
 
 footer{
     height: 20vh;
-    background-color: gray;
+    /* background-color: gray; */
 
 }
 
@@ -947,6 +1015,8 @@ footer{
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding-top: 1px;
+    
 
 }
 #top-footer{
@@ -992,5 +1062,112 @@ background-color: white;
     color:white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.8vh;
+    background-color: gray;
 
 }
+
+/* burger-appearance */
+@media only screen and (min-width: 801px){
+    #nav-burger-menu{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px ){
+
+    .burger{
+        display: flex;
+    }
+    #nav-menu-container{
+        display: none;
+    }
+    nav{
+        justify-content: space-between;
+        padding-right: 5vw;
+    }
+
+}
+
+
+
+
+@media only screen and (max-width: 1070px){
+#text-heading-3{
+    display: none;
+
+}
+.about-img-holder img{
+    height: 70%;
+    
+}
+
+#card-3-heading{
+    display: block;
+}
+#market-bottom-card-container{
+    flex-direction: column;
+    align-items: center;
+    
+}
+#marketing{
+    height: 200vh;
+}
+
+.market-bottom-cards{
+    width: 50%;
+}
+
+#market-section-title{
+    height: 10%;
+}
+}
+
+@media only screen and (max-width:900px){
+    
+#staging-text-list li{
+    font-size: 2.5vh;
+}
+
+.title-top{
+    font-size: 5vh;
+}
+
+#about-section{
+    height: 130vh;
+}
+    
+}
+
+@media only screen and (max-width: 700px){
+
+#staging-text-wrapper{
+    padding:10vh 3vh;
+}
+#staging-images{
+    width: 60%;
+}
+#staging-text{
+    width: 40%;
+}
+
+#about-section{
+    height: 150vh;
+}
+.about-img-holder img{
+    height: 50%;
+}
+
+#marketing-logos{
+    height: 2%;
+}
+
+#contact-top{
+    padding-top:5vh;
+    }
+
+.text-top{
+    font-size: 2.5vh;
+}
+
+}
+
